@@ -1,0 +1,269 @@
+@import '_unit';
+// 兼容微信小程序
+@if $unit == 'rpx' {
+	page,
+	view,
+	scroll-view,
+	swiper,
+	movable-area,
+	cover-view,
+	text,
+	icon,
+	rich-text,
+	progress,
+	button,
+	checkbox-group,
+	checkbox,
+	form,
+	input,
+	label,
+	picker,
+	picker-view,
+	radio-group,
+	slider,
+	switch,
+	textarea,
+	navigator,
+	audio,
+	image,
+	video,
+	live-player,
+	live-pusher,
+	open-data,
+	web-view { box-sizing: border-box; }
+}
+@else {
+	* { box-sizing: border-box; }
+
+	// 更正所有浏览器中的行高度。
+	// 防止在iOS中更改方向后调整字体大小。
+	html {
+	  line-height: 1.15; // 1
+	  -webkit-text-size-adjust: 100%; // 2
+	}
+	
+	// 更正所有浏览器中的字体大小。
+	// body {
+	// 	font-size: 14px;
+	// }
+	
+	// 在IE中一致地呈现“main”元素。
+	main {
+	  display: block;
+	}
+	
+	// 更正“section”和中“h1”元素的字体大小和边距和文章在Chrome，Firefox和Safari的上下文
+	h1 {
+	  font-size: 2em;
+	  margin: 0.67em 0;
+	}
+	
+	
+	// 1.	在Firefox中添加正确的框大小。
+	// 2. 在Edge和IE中显示溢出。
+	hr {
+	  box-sizing: content-box; 	// 1
+	  height: 0; 								// 1
+	  overflow: visible; 				// 2
+	}
+	
+	// 1. 更正所有浏览器中字体大小的继承和缩放。
+	// 2.	更正所有浏览器中奇怪的'em'字体大小。
+	pre {
+	  font-family: monospace, monospace; 	// 1
+	  font-size: 1em; 										// 2
+	}
+	
+	
+	// 删除IE 10中活动链接的灰色背景。
+	a {
+	  background-color: transparent;
+	}
+	
+
+	// 1.删​​除Chrome 57中的底部边框
+	// 2.在Chrome、Edge、IE、Opera和Safari中添加正确的文本装饰。
+	abbr[title] {
+	  border-bottom: none; 								// 1
+	  text-decoration: underline; 				// 2
+	  text-decoration: underline dotted; 	// 2
+	}
+	
+	// 在Chrome, Edge和Safari中添加正确的字体粗细。
+	b,
+	strong {
+	  font-weight: bolder;
+	}
+	
+	// 1.更正所有浏览器中字体大小的继承和缩放。
+	// 2.更正所有浏览器中奇怪的'em'字体大小。
+	code,
+	kbd,
+	samp {
+	  font-family: monospace, monospace; // 1
+	  font-size: 1em;										 // 2
+	}
+	
+	// 在所有浏览器中添加正确的字体大小。
+	small {
+	  font-size: 80%;
+	}
+	
+	// 防止“sub”和“sup”元素影响所有浏览器中的行高度
+	sub,
+	sup {
+	  font-size: 75%;
+	  line-height: 0;
+	  position: relative;
+	  vertical-align: baseline;
+	}
+	
+	sub {
+	  bottom: -0.25em;
+	}
+	
+	sup {
+	  top: -0.5em;
+	}
+	
+	// 删除IE10中链接内图像的边框。
+	img {
+	  border-style: none;
+	}
+	
+	// 1.更改所有浏览器中的字体样式。
+	// 2.删除Firefox和Safari中的边距。
+	button,
+	input,
+	optgroup,
+	select,
+	textarea {
+	  font-family: inherit; // 1
+	  font-size: 100%; 			// 1
+	  line-height: 1.15; 		// 1
+	  margin: 0; 						// 2
+	}
+	
+	// 在IE和Edge中显示溢出。
+	button,
+	input {
+	  overflow: visible;
+	}
+	
+	// 删除Edge、Firefox和IE中文本转换的继承。
+	button,
+	select {
+	  text-transform: none;
+	}
+	//删除小程序按钮的背景色和边框
+	button::after{
+		background-color: transparent;
+		border: 0;
+	}
+	// 更正无法在iOS和Safari中设置可单击类型的样式。
+	button,
+	[type="button"],
+	[type="reset"],
+	[type="submit"] {
+	  -webkit-appearance: button;
+	}
+	
+	// 删除Firefox中的内边框和填充。
+	button::-moz-focus-inner,
+	[type="button"]::-moz-focus-inner,
+	[type="reset"]::-moz-focus-inner,
+	[type="submit"]::-moz-focus-inner {
+	  border-style: none;
+	  padding: 0;
+	}
+	
+	// 恢复前一个规则未设置的焦点样式。
+	button:-moz-focusring,
+	[type="button"]:-moz-focusring,
+	[type="reset"]:-moz-focusring,
+	[type="submit"]:-moz-focusring {
+	  outline: 1px dotted ButtonText;
+	}
+	
+	// 更正Firefox中的填充。
+	fieldset {
+	  padding: 0.35em 0.75em 0.625em;
+	}
+	
+	// 1.纠正边缘和IE中的文字环绕。
+	// 2.更正IE中“fieldset”元素的颜色继承。
+	// 3.移除填充物，这样开发者在归零时不会被发现所有浏览器中的“fieldset”元素。
+	legend {
+	  box-sizing: border-box; // 1
+	  color: inherit; 				// 2
+	  display: table; 				// 1
+	  max-width: 100%;			 	// 1
+	  padding: 0; 						// 3
+	  white-space: normal; 		// 1
+	}
+	
+	// Chrome、Firefox和Opera中添加正确的垂直对齐方式。
+	progress {
+	  vertical-align: baseline;
+	}
+	
+	// 删除IE 10+中的默认垂直滚动条
+	textarea {
+	  overflow: auto;
+	}
+	
+	// 1.在IE 10中添加正确的盒子尺寸。
+	// 2.删除IE 10中的内边距。
+	[type="checkbox"],
+	[type="radio"] {
+	  box-sizing: border-box; // 1
+	  padding: 0; // 2
+	}
+	
+	// 更正Chrome中递增和递减按钮的光标样式。
+	[type="number"]::-webkit-inner-spin-button,
+	[type="number"]::-webkit-outer-spin-button {
+	  height: auto;
+	}
+	
+	// 1.纠正Chrome和Safari中的奇怪外观。
+	// 2.纠正Safari中的轮廓样式。
+	[type="search"] {
+	  -webkit-appearance: textfield; 	// 1
+	  outline-offset: -2px; 					// 2
+	}
+	
+	// 移除macOS上Chrome和Safari的内部填充。
+	[type="search"]::-webkit-search-decoration {
+	  -webkit-appearance: none;
+	}
+	
+	// 1.纠正无法在iOS和Safari中设置可单击类型的问题。
+	// 2.在Safari中将字体属性更改为“inherit”。
+	::-webkit-file-upload-button {
+	  -webkit-appearance: button; // 1
+	  font: inherit; 							// 2
+	}
+	
+	
+	// 在Edge、IE 10+和Firefox中添加正确的显示。
+	details {
+	  display: block;
+	}
+	
+	// 在所有浏览器中添加正确的显示。
+	summary {
+	  display: list-item;
+	}
+	
+	
+	// 在IE 10+中添加正确的显示。
+	template {
+	  display: none;
+	}
+	
+	// 在IE 10中添加正确的显示。
+	[hidden] {
+	  display: none;
+	}
+}

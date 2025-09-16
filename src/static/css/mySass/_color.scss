@@ -1,0 +1,47 @@
+$black: #333;
+$white: #fff;
+$grey-99: #999;
+$grey-c7: #c7c7c7;
+$grey-f8: #F8F8F8;
+$grey-f9: #F9F9F9;
+$pink: #FFDDD8;
+$light-pink: #F0F0F0;
+$red: #F07042;
+$orange: #FF9A1F;
+$blue: #35B9EF;
+$gold: #FAE6BF;
+$green: #0FC7A3;
+$purple: #ADBAFF;
+
+// 字体颜色
+$font-color-list: (
+	"black": $black,
+	"white": $white,
+	"grey-99": $grey-99,
+	"grey-c7": $grey-c7,
+	"red": $red,
+	"orange": $orange,
+	"blue": $blue,
+	"gold": $gold,
+	"green": $green
+);
+
+// 背景颜色
+$bg-color-list: (
+	"white": $white,
+	"red": $red,
+	"pink": $pink,
+	"light-pink": $light-pink,
+	"grey-f8": $grey-f8,
+	"grey-f9": $grey-f9,
+	"orange": $orange,
+	"blue": $blue,
+	"green": $green,
+	"purple": $purple
+);
+
+// 边框颜色
+$border-color-list: (
+	"black": $black,
+	"green": $green
+);

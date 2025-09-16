@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "iconfont-cq"; /* Project id 4417715 */
+  src: url('@/static/iconfont_cq/iconfont.woff2?t=1754272814142') format('woff2'),
+       url('@/static/iconfont_cq/iconfont.woff?t=1754272814142') format('woff'),
+       url('@/static/iconfont_cq/iconfont.ttf?t=1754272814142') format('truetype');
+}
+
+.iconfont-cq {
+  font-family: "iconfont-cq" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cq-zhifushibai:before {
+  content: "\e634";
+}
+
+.cq-warning:before {
+  content: "\e605";
+}
+
+.cq-tixingshixin:before {
+  content: "\ec72";
+}
+
+.cq-shibai:before {
+  content: "\e64e";
+}
+
+.cq-chenggong:before {
+  content: "\e60d";
+}
+
+.cq-zhongxinjiazai:before {
+  content: "\e6c0";
+}
+
+.cq-xiaochengxufanhui:before {
+  content: "\e6f7";
+}
+
+.cq-tianjia:before {
+  content: "\e63f";
+}
+
+.cq-xiaochengxufanhuishouyeanniu:before {
+  content: "\e601";
+}
+
+.cq-xiala:before {
+  content: "\e65c";
+}
+

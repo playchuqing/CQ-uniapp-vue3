@@ -1,0 +1,37 @@
+$unit: 'rpx';					// 单位：px,rpx,rem
+											// 以下配置 $unit 为 rem 有效
+$grids: 0.1;					// 将设备宽度划分若干等分
+$prototypeSize: 375;	// 原型设计稿宽度	(编辑器 的 rem 转换比例是 $prototypeSize * $grids)
+$maxScreenSize: 375;	// 适配屏幕最高宽度
+$minScreenSize: 320;	// 适配屏幕最低宽度
+
+
+$size: 1px;						// 全局样式的 单位大小
+@if				($unit == 'rpx') { $size: 2rpx; }
+@else if	($unit == 'rem') { $size: 1rem; }
+
+
+
+//要求UI部pc设计稿宽1920px，移动端375px
+// 加上以下部分在head页面，实现响应式，根据设计稿写宽高，如10px写成10rem
+
+
+// <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+// (function(doc, win) {
+// 	var docEl = doc.documentElement,					//orientationchange判断设备横向持或纵向持   //resize 计算屏幕宽度
+// 	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+// 	recalc = function() {
+// 		var clientWidth = docEl.clientWidth;
+// 		if (!clientWidth) return;
+// 		if (clientWidth >= 768) {
+// 			docEl.style.fontSize = (clientWidth / 1522) + 'px';
+// 		} else {
+// 			docEl.style.fontSize = (clientWidth / 375) + 'px';
+// 		}
+// 	};
+
+// 	if (!doc.addEventListener) return;
+// 	win.addEventListener(resizeEvt, recalc, false);
+// 	doc.addEventListener('DOMContentLoaded', recalc, false);
+// })(document, window);
