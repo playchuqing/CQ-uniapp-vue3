@@ -21,5 +21,8 @@ onHide(() => {
 </style>
 
 <style>
+	/* #ifdef MP-WEIXIN */
 	@import 'static/css/mySass/app.wxss';
+	/* #endif */
+	
 </style>
